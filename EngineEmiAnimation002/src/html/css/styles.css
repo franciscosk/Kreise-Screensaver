@@ -1,0 +1,90 @@
+
+body {
+    background: #353c43;
+    font-family: Roboto, sans-serif;
+    text-align: center;
+}
+
+.header {
+    float: left;
+    margin: 0;
+    overflow: hidden;
+    position: fixed;
+    padding-left: 16px;
+    padding-top: 16px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 46px;
+    color: #fff;
+    font-size: 24px;
+    background-color: #1976D2;
+    text-align: left;
+    z-index: 1;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.28);
+}
+
+.root {
+    margin: auto;
+    width: 80%;
+    padding-top: 60px;
+}
+
+.root-children > * {
+    display: inline-block;
+}
+
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+	float: left;
+}
+
+
+.loader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  align-self: center;
+  justify-content: center;
+}
+
+.spinner {
+  display: flex;
+  align-content: center;
+  align-self: center;
+  justify-content: center;
+  animation: rotate 2s linear infinite;
+}
+
+.spinner circle {
+  fill: none;
+  stroke: #fff;
+  animation: dash 1.4s cubic-bezier(0.4,0,0.2,1) infinite;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 2, 155;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 128, 24;
+    stroke-dashoffset: -20;
+  }
+  100% {
+    stroke-dasharray: 2, 155;
+    stroke-dashoffset: -155;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
